@@ -1,0 +1,15 @@
+{
+  "name": "@adrianmg/hello-world-package",
+  "version": "1.0.4",
+  "description": "Hello world npm module",
+  "main": "index.js",
+  "author": "Adrian Mato",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/adrianmg/hello-world-package.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}
