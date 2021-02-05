@@ -1,0 +1,32 @@
+# This is just a test to see how the different contexts of a secret work
+
+name: Secrets testing
+on: workflow_dispatch
+
+jobs:
+  org:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print value
+      env:
+        ORG_SECRET: ${{ secrets.TEST_KEY }}
+      run: |
+        echo "Printing org secret = $ORG_SECRET"
+
+  repo:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print value
+      env:
+        REPO_SECRET: ${{ secrets.TEST_KEY }}
+      run: |
+        echo "Printing repo secret = $REPO_SECRET"
+
+  env:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print value
+      env:
+        ENV_SECRET: ${{ secrets.TEST_KEY }}
+      run: |
+        echo "Printing env secret = $ENV_SECRET"
